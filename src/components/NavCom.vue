@@ -55,6 +55,7 @@ export default {
     .router-link-exact-active{
         background: #218efe;
         display: block;
+        height: 100%;
     }
     .nav-list{
         display: flex;
@@ -82,6 +83,7 @@ export default {
     }
     .nav-item a{
         color: #fff;
+        
     }
 </style>
 
