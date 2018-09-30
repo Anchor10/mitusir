@@ -5,6 +5,9 @@
             <img :src="src" alt="">
             <h3>扫一扫加微信,放心不是骗子(*￣︶￣)</h3>
         </div>
+        <div class="map-intro">
+            <h4>我在这里<span>(双击地图可放大)</span>:</h4>
+        </div>
         <div id="allmap"></div>
         <NavCom></NavCom>
     </div>
@@ -29,12 +32,12 @@ export default {
       // 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
 	map.centerAndZoom(new BMap.Point(118.19, 24.49), 5);  // 初始化地图,设置中心点坐标和地图级别
-	//添加地图类型控件
-	// map.addControl(new BMap.MapTypeControl({
-	// 	mapTypes:[
-    //         BMAP_NORMAL_MAP,
-    //         BMAP_HYBRID_MAP
-    //     ]}));	  
+	// 添加地图类型控件
+	map.addControl(new BMap.MapTypeControl({
+		mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));	  
 	map.setCurrentCity("厦门");          // 设置地图显示的城市 此项是必须设置的
     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
     // map.addEventListener("click", function(e){    
@@ -57,18 +60,18 @@ export default {
 
 </script>
 <style scoped>
-    /* .box{
-        width: 200px;
+    .box{
+        background: #f2f2f2;
     }
-    .box img{
-        width: 200px;
-    } */
     #allmap{
-        width: 100%;
-        height: 300px;
+        width: 90%;
+        margin: 0 auto;
+        height: 200px;
+        border: 1px solid #ccc;
     }
     .wechat img{
         display: block;
+        margin: 0 auto;
         border-radius: 50%;
         width: 50%;
         height: auto;
