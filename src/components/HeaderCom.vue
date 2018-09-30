@@ -1,6 +1,10 @@
 <template>
     <div>
-        <p class="title">{{tit}}</p>
+        
+        <p class="title">
+            <span class="back" @click="back">&lt;</span>
+            {{tit}}
+        </p>
     </div>
 </template>
 <script>
@@ -8,6 +12,11 @@ export default {
     name:'HeaderCom',
     props:
         ['tit'],
+    methods:{
+        back(){
+            this.$router.go(-1);
+        }
+    }
 }
 </script>
 <style scoped>
@@ -22,9 +31,10 @@ export default {
         list-style-type: none;
     }
     .title{
+        max-width: 650px;
         position: fixed;
         top: 0;
-        left: 0;
+        /* left: 0; */
         height: 40px;
         line-height: 40px;
         background: #0ea1f6;
@@ -32,6 +42,14 @@ export default {
     font-size: 16px;
     color: #fff;
     box-shadow: 1px 0px 20px #ccc;
+    }
+    .back{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
     }
 </style>
 

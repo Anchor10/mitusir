@@ -22,9 +22,9 @@ export default {
                     icon:"icon-shouye"
                 },
                 {
-                    title:"BT手游",
+                    title:"照片墙",
                     src:"./home",
-                    icon:"icon-youxichongzhi"
+                    icon:"icon-picture"
                 },
                 {
                     title:"破解手游",
@@ -32,7 +32,7 @@ export default {
                     icon:"icon-liebiao"
                 },
                 {
-                    title:"满Ｖ手游",
+                    title:"我",
                     src:"./about",
                     icon:"icon-guanyuwomen"
                 }
@@ -58,10 +58,12 @@ export default {
         height: 100%;
     }
     .nav-list{
+        max-width: 650px;
+        /* margin: 0 auto; */
         display: flex;
         position: fixed;
         bottom: 0;
-        left: 0;
+        /* left: 0; */
         background: #0ea1f6;
         width: 100%;
         height: 50px;
