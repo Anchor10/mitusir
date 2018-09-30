@@ -3,12 +3,13 @@
         <HeaderCom :tit="title"/>
         <div class="wechat">
             <img :src="src" alt="">
-            <h3>扫一扫加微信,放心不是骗子(*￣︶￣)</h3>
+            <h3>扫一扫加微信,放心不是传销(*￣︶￣)</h3>
         </div>
         <div class="map-intro">
-            <h4>我在这里<span>(双击地图可放大)</span>:</h4>
+            <h4>我在这里:<span>(可切换成卫星云图)</span></h4>
         </div>
         <div id="allmap"></div>
+        <div class=""></div>
         <NavCom></NavCom>
     </div>
 </template>
@@ -62,18 +63,28 @@ export default {
 <style scoped>
     .box{
         background: #f2f2f2;
+        background: url(../../static/images/bg.jpeg);
+        background-size: contain;
     }
     #allmap{
         width: 90%;
         margin: 0 auto;
         height: 200px;
         border: 1px solid #ccc;
+        box-shadow: 0px 0px 20px #000;
+        border-radius: 5px;
     }
     .wechat img{
         display: block;
         margin: 0 auto;
         border-radius: 50%;
-        width: 50%;
+        width: 40%;
         height: auto;
+        box-shadow: 1px 1px 20px #000;
+    }
+    .map-intro span{
+        color: red;
+        font-size: 12px;
+        font-weight: 300;
     }
 </style>
