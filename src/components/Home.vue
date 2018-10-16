@@ -45,7 +45,7 @@ export default {
     height: 200px;
     /* border: 1px solid skyblue; */
     margin: 0 auto;
-    background: url(../../static/images/bg.jpg) no-repeat;
+    background: url(/static/images/bg.jpg) no-repeat;
     background-size: 100% 300px;
     position: relative;
     overflow: hidden;
