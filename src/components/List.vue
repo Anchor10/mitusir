@@ -12,7 +12,7 @@ export default {
     name: 'List',
     data() {
         return {
-            title:"列表",
+            title:"文摘",
             src: 'http://www.vrzhijia.com/d/file/ads/shouyeyizhougaofenyanxuan/2018-07-16/3a3611fce1b1d0a4b9f7c3eaa38e6c0e.jpg'
         }
     },

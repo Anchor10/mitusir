@@ -24,6 +24,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 40px;
+  margin-bottom: 50px;
 }
 .qust-ad{
   display: block;

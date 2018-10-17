@@ -35,20 +35,20 @@ export default {
         position: fixed;
         top: 0;
         /* left: 0; */
-        height: 40px;
-        line-height: 40px;
-        background: #0ea1f6;
+        height: 30px;
+        line-height: 30px;
+        background: #fff;
         width: 100%;
     font-size: 16px;
-    color: #fff;
-    box-shadow: 1px 0px 20px #ccc;
+    color: #2c3e50;
+    box-shadow: 1px 0px 10px #ccc;
     }
     .back{
         position: absolute;
         left: 0;
         top: 0;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         font-size: 24px;
     }
 </style>

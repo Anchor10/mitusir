@@ -10,7 +10,7 @@
         <div class="star3"></div>
         <div class="star4"></div>
         <div class="star5"></div>
-        <div class="title">祈愿一辈子平安幸福!❥</div>
+        <div class="title">祈愿平安幸福!❥</div>
     </div>
         <img :src="src" alt="">
         <NavCom></NavCom>
@@ -23,7 +23,7 @@ export default {
     name: 'Home',
     data() {
         return {
-            title:"首页",
+            title:"照片墙",
             src: 'http://www.vrzhijia.com/d/file/pingce/2017-09-20/947da2fe34bdc39c658013545c96ad6a.jpg'
         }
     },

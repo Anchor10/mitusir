@@ -27,7 +27,7 @@ export default {
                     icon:"icon-picture"
                 },
                 {
-                    title:"破解手游",
+                    title:"文摘",
                     src:"./list",
                     icon:"icon-liebiao"
                 },
@@ -39,6 +39,7 @@ export default {
             ]
         }
     }
+
 }
 </script>
 <style scoped>
@@ -52,10 +53,12 @@ export default {
     li{
         list-style-type: none;
     }
-    .router-link-exact-active{
-        background: #218efe;
+    .router-link-exact-active i,
+    .router-link-exact-active p{
+        /* background: #218efe; */
         display: block;
-        height: 100%;
+        /* height: 100%; */
+        color: #218efe;
     }
     .nav-list{
         max-width: 650px;
@@ -64,11 +67,11 @@ export default {
         position: fixed;
         bottom: 0;
         /* left: 0; */
-        background: #0ea1f6;
+        background: #fff;
         width: 100%;
         height: 50px;
         text-align: center;
-        box-shadow: -1px 0px 10px #000;
+        box-shadow: -1px 0px 10px #ccc;
     }
     .nav-item{
         width: 25%;
@@ -84,8 +87,11 @@ export default {
         margin-top: 0;
     }
     .nav-item a{
-        color: #fff;
+        color: #919191;
         
+    }
+    .active{
+        color: #218efe;
     }
 </style>
 
