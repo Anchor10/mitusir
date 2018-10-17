@@ -49,7 +49,7 @@ export default {
         top: 0;
         height: 30px;
         width: 30px;
-        font-size: 24px;
+        font-size: 20px;
     }
 </style>
 
