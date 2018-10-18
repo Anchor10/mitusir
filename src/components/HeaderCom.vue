@@ -37,10 +37,10 @@ export default {
         /* left: 0; */
         height: 30px;
         line-height: 30px;
-        background: #fff;
+        background: #0ea1f6;
         width: 100%;
     font-size: 16px;
-    color: #2c3e50;
+    color: #fff;
     box-shadow: 1px 0px 10px #ccc;
     }
     .back{
