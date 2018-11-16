@@ -99,10 +99,10 @@
 import NavCom from "@/components/NavCom";
 import HeaderCom from "@/components/HeaderCom";
 export default {
-  name: 'Demo',
+  name: 'Photo',
   data () {
     return {
-      title:"不爱编程的兔子(*￣︶￣)",
+      title:"照片墙",
       msg: 'Welcome to Your Vue.js App',
       love: '我喜欢vue',
       hate: '我讨厌react',

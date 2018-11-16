@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Demo from '@/components/Demo'
+import Photo from '@/components/Photo'
 import Home from '@/components/Home'
 import List from '@/components/List'
 import About from '@/components/About'
@@ -12,13 +12,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Demo',
-      component: Demo
-    },
-    {
-      path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/photo',
+      name: 'Photo',
+      component: Photo
     },
     {
       path: '/list',

@@ -23,7 +23,7 @@ export default {
                 },
                 {
                     title:"照片墙",
-                    src:"./home",
+                    src:"./photo",
                     icon:"icon-picture"
                 },
                 {
