@@ -9,6 +9,14 @@ Vue.use(Router)
 
 export default new Router({
   mode:'history',
+  scrollBehavior(to, from, savedPosition) {
+    // 兼容  点击返回会返回到原来的位置
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return {x: 0, y: 0}
+    }
+  },
   routes: [
     {
       path: '/',
