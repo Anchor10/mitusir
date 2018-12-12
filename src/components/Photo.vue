@@ -98,6 +98,7 @@
 <script>
 import NavCom from "@/components/NavCom";
 import HeaderCom from "@/components/HeaderCom";
+import '../../static/js/snowstorm.js';
 export default {
   name: 'Photo',
   data () {
