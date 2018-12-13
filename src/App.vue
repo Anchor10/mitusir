@@ -16,9 +16,11 @@ export default {
   margin: 0;
   padding: 0;
 }
-body{
+body,html{
+  max-width: 650px;
   background: url(/static/images/bg.jpeg) no-repeat;
-        background-size: cover;
+        background-size: 100% auto;
+        background-attachment: fixed;
 }
 a{
   text-decoration: none;
