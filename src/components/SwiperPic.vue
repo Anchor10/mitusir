@@ -16,8 +16,14 @@
                 </div>
                 <div class="swiper-slide">
                     <a href="javascript:;">
+                        <img src="/static/images/ykj.png" alt="">
+                        <p>南京程序员杨某凌晨被送往医院</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
                         <img src="/static/images/dwh.jpg" alt="">
-                        <p>村头的大爷为何健硕如牛</p>
+                        <p>村头百岁老大爷为何健硕如牛</p>
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -26,9 +32,11 @@
                         <p>村尾大妈的冰糖葫芦为何惨遭下毒</p>
                     </a>
                 </div>
-                <div class="swiper-pagination" id="pag-pic"></div>
+                
             </div>
-            
+            <div class="swiper-button-prev" id="prev"></div><!--左箭头-->
+            <div class="swiper-button-next" id="next"></div><!--右箭头-->
+            <div class="swiper-scrollbar" id="scrollbar"></div>
         </div>
     </div>
 </template>
@@ -44,15 +52,22 @@ export default {
     mounted(){
         $(function(){
             var mySwiper = new Swiper('#swiper-pic', {
-            autoplay: false,//可选选项，自动滑动
-            loop:true,
-            pagination: {
-                el: '#pag-pic',
-                type : 'progressbar',
-            },
-            observer:true, //修改swiper自己或子元素时，自动初始化swiper
-            observeParents:true,//修改swiper的父元素时，自动初始化swiper
-        })
+                speed:800,
+                autoplay: {
+                    delay:4000,
+                    disableOnInteraction: false,
+                },
+                loop:false,
+                navigation: {
+                    nextEl: '#next',
+                    prevEl: '#prev',
+                },
+                scrollbar: {
+                    el: '#scrollbar',
+                },
+                observer:true,
+                observeParents:true,
+            })
         })
     }
 }
@@ -90,40 +105,22 @@ export default {
         text-align: left;
         text-indent: 10px;
     }
-    #pag-pic{
-        box-sizing: border-box;
-        right: 0px;
-        bottom: 6px;
-        height: 30px !important;
-        text-align: right;
-        padding-right: 10px;
+    #swiper-pic #next{
+        width: 30px;
+        height: 30px;
+        background: url(../../static/images/r-arrow.png) no-repeat;
+        background-size: 30px 30px;
+        border-radius: 5px;
+        outline: none;
     }
-    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 2px;
-    width: 15px !important;
-    height: 10px !important;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    background: #ccc;
-}
-    /* #pag-pic .swiper-pagination-bullet-active {
-    background: #000;
-    width: 25px !important;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-    #pag-pic .swiper-pagination {
-    text-align: right;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    bottom: 12px;
-    padding-right: 10px;
-}
-    #pag-pic .swiper-pagination-bullet {
-    border-radius: 0px;
-} */
+    #swiper-pic #prev{
+        width: 30px;
+        height: 30px;
+        background: url(../../static/images/l-arrow.png) no-repeat;
+        background-size: 30px 30px;
+        border-radius: 5px;
+        outline: none;
+    }
 </style>
 
 

@@ -72,6 +72,7 @@ export default {
         height: 50px;
         text-align: center;
         box-shadow: -1px 0px 10px #ccc;
+        z-index: 99999;
     }
     .nav-item{
         width: 25%;

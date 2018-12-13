@@ -39,9 +39,10 @@ export default {
         line-height: 30px;
         background: #0ea1f6;
         width: 100%;
-    font-size: 16px;
-    color: #fff;
-    box-shadow: 1px 0px 10px #ccc;
+        font-size: 16px;
+        color: #fff;
+        box-shadow: 1px 0px 10px #ccc;
+        z-index: 99999;
     }
     .back{
         position: absolute;
