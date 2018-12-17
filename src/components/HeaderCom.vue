@@ -2,7 +2,7 @@
     <div>
         
         <p class="title">
-            <span class="back" @click="back">&lt;</span>
+            <span class="back" @click="back" v-if="backShow">&lt;</span>
             {{tit}}
         </p>
     </div>
@@ -11,7 +11,7 @@
 export default {
     name:'HeaderCom',
     props:
-        ['tit'],
+        ['tit','backShow'],
     methods:{
         back(){
             this.$router.go(-1);
@@ -37,7 +37,7 @@ export default {
         /* left: 0; */
         height: 30px;
         line-height: 30px;
-        background: #0ea1f6;
+        background: linear-gradient(to bottom right, #fff 10%,#0ea1f6);
         width: 100%;
         font-size: 16px;
         color: #fff;
@@ -46,11 +46,12 @@ export default {
     }
     .back{
         position: absolute;
-        left: 0;
+        left: 10px;
         top: 0;
         height: 30px;
         width: 30px;
         font-size: 20px;
+        line-height: 30px;
     }
 </style>
 

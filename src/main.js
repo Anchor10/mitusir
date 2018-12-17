@@ -4,17 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
+import VueLazyload from 'vue-lazyload'
 import '../static/js/jquery.js'
-// import '../static/js/snowstorm.js'
+import '../static/js/common.js'
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
+
+Vue.use(VueLazyload,{
+  preLoad: 1.1,
+  error:require('../static/images/error.gif'),
+  loading:require('../static/images/loading.gif'),
+  attempt: 1,
+  })
 Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
@@ -27,3 +28,11 @@ const store = new Vuex.Store({
   }
 })
 console.log(store.state.count)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})

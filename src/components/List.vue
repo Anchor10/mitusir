@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :tit="title"/>
+        <HeaderCom :tit="title" :backShow="backShow"/>
         <img :src="src" alt="">
         <NavCom></NavCom>
     </div>
@@ -13,6 +13,7 @@ export default {
     data() {
         return {
             title:"文摘",
+            backShow:false,
             src: 'http://www.vrzhijia.com/d/file/ads/shouyeyizhougaofenyanxuan/2018-07-16/3a3611fce1b1d0a4b9f7c3eaa38e6c0e.jpg'
         }
     },

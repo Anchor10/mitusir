@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <HeaderCom :tit="title"/>
+    <HeaderCom :tit="title" :backShow="backShow"/>
     <h1>{{ msg }}</h1>
     <h2>{{love}}</h2>
     <h3>{{msg}}</h3>
@@ -104,6 +104,7 @@ export default {
   data () {
     return {
       title:"照片墙",
+      backShow:false,
       msg: 'Welcome to Your Vue.js App',
       love: '我喜欢vue',
       hate: '我讨厌react',

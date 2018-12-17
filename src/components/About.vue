@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :tit="title"/>
+        <HeaderCom :tit="title" :backShow="backShow"/>
         <div class="wechat">
             <img :src="src" alt="">
             <h3>扫一扫加微信,放心不是传销(*￣︶￣)</h3>
@@ -22,6 +22,7 @@ export default {
     data() {
         return {
             title:"你认识我嘛",
+            backShow:false,
             src: './static/images/qrcode.jpg'
         }
     },

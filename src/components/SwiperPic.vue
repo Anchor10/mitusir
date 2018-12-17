@@ -2,37 +2,12 @@
     <div>
         <div class="swiper-container" id="swiper-pic">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide" v-for="(item,index) in bannerList" :key="index">
                     <a href="javascript:;">
-                        <img src="/static/images/dwh.jpg" alt="">
-                        <p>国内无名小帅哥竟登上时代周刊</p>
+                        <img v-lazy="item.imgSrc" alt="">
+                        <p>{{item.imgTitle}}</p>
                     </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="/static/images/wx-dwh.jpg" alt="">
-                        <p>是和好如初 还是就此放手</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="/static/images/ykj.png" alt="">
-                        <p>南京程序员杨某凌晨被送往医院</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="/static/images/dwh.jpg" alt="">
-                        <p>村头百岁老大爷为何健硕如牛</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="/static/images/wx.jpg" alt="">
-                        <p>村尾大妈的冰糖葫芦为何惨遭下毒</p>
-                    </a>
-                </div>
-                
+                </div>               
             </div>
             <div class="swiper-button-prev" id="prev"></div><!--左箭头-->
             <div class="swiper-button-next" id="next"></div><!--右箭头-->
@@ -44,6 +19,37 @@
 import Swiper from '../../static/js/swiper.min.js' 
 export default {
     name:'SwiperPic',
+    data:function(){
+        return {
+            bannerList:[
+            {
+                imgSrc:'/static/images/dwh.jpg',
+                imgTitle:"国内无名小帅哥竟登上时代周刊",
+                aHref:"javascript:;"
+            },
+            {
+                imgSrc:'/static/images/wx-dwh.jpg',
+                imgTitle:"是和好如初 还是就此放手",
+                aHref:"javascript:;"
+            },
+            {
+                imgSrc:'/static/images/ykj.png',
+                imgTitle:"南京程序员杨某凌晨被送往医院",
+                aHref:"javascript:;"
+            },
+            {
+                imgSrc:'/static/images/dwh.jpg',
+                imgTitle:"村头百岁老大爷为何健硕如牛",
+                aHref:"javascript:;"
+            },
+            {
+                imgSrc:'/static/images/wx.jpg',
+                imgTitle:"村尾大妈的冰糖葫芦为何惨遭下毒",
+                aHref:"javascript:;"
+            },
+                     ]
+        }
+    },
     props:
         ['tit'],
     methods:{

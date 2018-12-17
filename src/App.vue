@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="http://app.3733.com/" class="qust-ad"><img src="../static/images/5a.jpg"></a>
+    <div class="qust-ad"><iframe width="100%" scrolling="no" height="30" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=11&color=%23&bgc=%23FFFFFF&bdc=%23&icon=1&site=14"></iframe></div>
     <router-view/>
   </div>
 </template>
@@ -10,40 +10,3 @@ export default {
   name: 'App'
 }
 </script>
-
-<style>
-*{
-  margin: 0;
-  padding: 0;
-}
-body,html{
-  max-width: 650px;
-  background: url(/static/images/bg.jpeg) no-repeat;
-        background-size: 100% auto;
-        background-attachment: fixed;
-}
-a{
-  text-decoration: none;
-}
-li{
-  list-style: none;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-.qust-ad{
-  display: block;
-  width: 100%;
-  overflow: hidden;
-}
-.qust-ad img{
-  width: 100%;
-  display: block;
-}
-</style>
