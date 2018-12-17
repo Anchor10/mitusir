@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+#app{
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(/static/images/bg.jpeg) repeat-y;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .qust-ad{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 30px;
+    margin-bottom: -11px;
+  }
+  .qust-ad img{
+    width: 100%;
+    display: block;
+  }
