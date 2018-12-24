@@ -1,7 +1,16 @@
 <template>
     <div class="box">
         <HeaderCom :tit="title" :backShow="backShow"/>
-        <img :src="src" alt="">
+        <div class="video-box">
+            <ul class="con-list">
+                    <li class="con-item" v-for="(item,index) in videoList" :key="index">
+                        <h4>{{item.title}}</h4>
+                        <video width="100%" :poster="item.poster" :src="item.videoSrc" controls>
+                            您的浏览器不支持video标签
+                        </video>
+                    </li>
+                </ul>
+        </div>
         <NavCom></NavCom>
         <Totop/>
     </div>
@@ -14,9 +23,51 @@ export default {
     name: 'List',
     data() {
         return {
-            title:"文摘",
+            title:"视频推荐",
             backShow:false,
-            src: 'http://www.vrzhijia.com/d/file/ads/shouyeyizhougaofenyanxuan/2018-07-16/3a3611fce1b1d0a4b9f7c3eaa38e6c0e.jpg'
+            // 视频推荐
+            videoList:[
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+                {
+                    title:'神座--游戏视频',
+                    poster:'/static/images/loading.gif',
+                    videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
+                },
+            ],
         }
     },
     components :{
@@ -26,11 +77,19 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="less">
     .box{
-        width: 200px;
-    }
-    .box img{
-        width: 200px;
+        width: 100%;
+        .video-box{
+            padding: 5px;
+            .con-list{
+                .con-item{
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    background: #fff;
+                    border-radius: 5px;
+                }
+            }
+        }
     }
 </style>

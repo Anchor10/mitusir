@@ -27,7 +27,7 @@ export default {
                     icon:"icon-picture"
                 },
                 {
-                    title:"文摘",
+                    title:"视频",
                     src:"./list",
                     icon:"icon-liebiao"
                 },

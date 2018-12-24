@@ -148,6 +148,7 @@ import Totop from "@/components/Totop";
         // padding: 0 5px;
         .box{
             margin-bottom: 5px;
+            position: relative;
             }
         .pic{
             padding: 5px;
@@ -159,6 +160,15 @@ import Totop from "@/components/Totop";
                 width: 100%;
                 display: block;
             }
+            img {    
+                transform: scale(1);          /*图片原始大小1倍*/
+                transition: all ease 0.5s; }  /*图片放大所用时间*/
+
+
+                img.active {     
+                transform: scale(3);          /*图片需要放大3倍*/
+                position: absolute;           /*是相对于前面的容器定位的，此处要放大的图片，不能使用position：relative；以及float，否则会导致z-index无效*/
+                z-index: 100; }  
         .zq-waterfall-left{
             box-sizing: border-box;
             float: left;

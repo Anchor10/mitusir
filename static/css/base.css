@@ -22,9 +22,9 @@ body {
     max-width: 650px;
     margin: 0 auto;
     overflow: hidden;
-    background: url(/static/images/bg.jpeg) repeat-y;
+    /* background: url(/static/images/bg.jpeg) repeat-y;
     background-size: 100% auto;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,6 +32,17 @@ body {
     color: #2c3e50;
     padding-top: 30px;
     padding-bottom: 50px;
+  }
+  #app:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(/static/images/bg.jpeg) repeat-y;
+    background-size: 100% auto;
   }
   .qust-ad{
     display: block;
