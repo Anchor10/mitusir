@@ -3,11 +3,13 @@
         <HeaderCom :tit="title" :backShow="backShow"/>
         <img :src="src" alt="">
         <NavCom></NavCom>
+        <Totop/>
     </div>
 </template>
 <script>
 import NavCom from "@/components/NavCom";
 import HeaderCom from "@/components/HeaderCom";
+import Totop from "@/components/Totop";
 export default {
     name: 'List',
     data() {
@@ -19,7 +21,8 @@ export default {
     },
     components :{
     NavCom,
-    HeaderCom
+    HeaderCom,
+    Totop,
   }
 }
 </script>

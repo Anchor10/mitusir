@@ -7,7 +7,7 @@ import Vuex from 'vuex'
 import VueLazyload from 'vue-lazyload'
 import '../static/js/jquery.js'
 import '../static/js/common.js'
-Vue.config.productionTip = false
+Vue.config.productionTip = false//阻止启动生产消息
 
 
 Vue.use(VueLazyload,{

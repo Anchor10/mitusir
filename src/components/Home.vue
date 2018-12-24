@@ -37,11 +37,13 @@
             </div>
         </div>
         <NavCom></NavCom>
+        <Totop/>
     </div>
 </template>
 <script>
 import NavCom from "@/components/NavCom";
 import HeaderCom from "@/components/HeaderCom";
+import Totop from "@/components/Totop";
 import SwiperPic from "@/components/SwiperPic"
 export default {
     name: 'Home',
@@ -81,22 +83,22 @@ export default {
             videoList:[
                 {
                     title:'神座--游戏视频',
-                    poster:'/static/images/bg.jpg',
+                    poster:'/static/images/loading.gif',
                     videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
                 },
                 {
                     title:'神座--游戏视频',
-                    poster:'/static/images/bg.jpg',
+                    poster:'/static/images/loading.gif',
                     videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
                 },
                 {
                     title:'神座--游戏视频',
-                    poster:'/static/images/bg.jpg',
+                    poster:'/static/images/loading.gif',
                     videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
                 },
                 {
                     title:'神座--游戏视频',
-                    poster:'/static/images/bg.jpg',
+                    poster:'/static/images/loading.gif',
                     videoSrc:'http://1252153290.vod2.myqcloud.com/da1e24bdvodgzp1252153290/df7420b35285890782905196910/SYHXJfty1qwA.mp4'
                 },
             ],
@@ -171,6 +173,7 @@ export default {
     components :{
     NavCom,
     HeaderCom,
+    Totop,
     SwiperPic
   }
 }

@@ -11,12 +11,14 @@
         <div id="allmap"></div>
         <div class=""></div>
         <NavCom></NavCom>
+        <Totop/>
     </div>
 </template>
 
 <script>
 import NavCom from "@/components/NavCom";
 import HeaderCom from "@/components/HeaderCom";
+import Totop from "@/components/Totop";
 export default {
     name: 'About',
     data() {
@@ -28,7 +30,8 @@ export default {
     },
     components :{
     NavCom,
-    HeaderCom
+    HeaderCom,
+    Totop,
   },
   mounted(){
       // 百度地图API功能
