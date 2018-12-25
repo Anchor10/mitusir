@@ -27,7 +27,6 @@ const store = new Vuex.Store({
     }
   }
 })
-console.log(store.state.count)
 
 /* eslint-disable no-new */
 new Vue({

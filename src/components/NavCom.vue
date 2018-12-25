@@ -59,6 +59,7 @@ export default {
         display: block;
         /* height: 100%; */
         color: #218efe;
+        transition: 0.3s;
     }
     .nav-list{
         max-width: 650px;
@@ -82,13 +83,16 @@ export default {
         display: block;
         padding-top: 5px;
         font-size: 20px;
+        transition: 0.3s;
     }
     .nav-item p{
         font-size: 14px;
         margin-top: 0;
+        transition: 0.3s;
     }
     .nav-item a{
         color: #919191;
+        transition: 0.3s;
         
     }
     .active{

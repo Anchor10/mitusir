@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :tit="title" :backShow="backShow"/>
+        <HeaderCom :backShow="backShow"/>
         <SwiperPic />
         <div class="con-box">
             <div class="con-nav">
@@ -209,15 +209,17 @@ export default {
     .con-box .con-nav{
         display: flex;
         background: #aaa;
-        border-radius: 5px;
+        border-radius: 10px;
         height: 30px;
         line-height: 30px;
+        box-shadow: 1px 1px 10px inset #000;
     }
     .con-box .con-nav a{
         display: block;
         flex: 1;
         text-align: center;
-        border-left: 1px solid #ccc;
+        /* border-left: 1px solid #ccc; */
+        transition: 0.3s;
         color: #fff;
     }
     .con-box .con-nav a:nth-of-type(1){
@@ -226,6 +228,9 @@ export default {
     .con-box .con-nav a.cur{
         background: #0ea1f6;
         box-shadow: 1px 1px 10px #000;
+        border-radius: 10px;
+        border-left: 0;
+        transition: 0.3s;
     }
     .con-lists{
         margin-top: 5px;

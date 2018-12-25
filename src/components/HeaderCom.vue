@@ -3,15 +3,21 @@
         
         <p class="title">
             <span class="back" @click="back" v-if="backShow">&lt;</span>
-            {{tit}}
+            <router-link class="search" :to="'/search'"></router-link>
+            <router-link class="userImg" :to="'/user'"><img :src="userImg" alt=""></router-link>
         </p>
     </div>
 </template>
 <script>
 export default {
     name:'HeaderCom',
+    data(){
+        return {
+            userImg:"/static/images/dwh.jpg"
+        }
+    },
     props:
-        ['tit','backShow'],
+        ['backShow'],
     methods:{
         back(){
             this.$router.go(-1);
@@ -37,7 +43,7 @@ export default {
         /* left: 0; */
         height: 30px;
         line-height: 30px;
-        background: linear-gradient(to bottom right, #fff 10%,#0ea1f6);
+        background: #6ca9d6;
         width: 100%;
         font-size: 16px;
         color: #fff;
@@ -52,6 +58,37 @@ export default {
         width: 30px;
         font-size: 20px;
         line-height: 30px;
+    }
+    .userImg{
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        height: 25px;
+        width: 25px;
+        font-size: 20px;
+        line-height: 30px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        overflow: hidden;
+    }
+    .userImg img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        
+    }
+    .search{
+        display: block;
+        position: absolute;
+        right: 35px;
+        top: 4px;
+        height: 22px;
+        width: 50%;
+        font-size: 22px;
+        background: url(/static/images/searchBtn.png)no-repeat right center #fff;
+        background-size: 28px 28px;
+        border-radius: 3px;
     }
 </style>
 

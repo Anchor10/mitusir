@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderCom :tit="title" :backShow="backShow"/>
+        <HeaderCom :backShow="backShow"/>
         <div class="zq-waterfall">
             <div class="zq-waterfall-left">
                 <div class="box" v-for="(item,index) in itemsA" :key="index">
@@ -122,10 +122,8 @@ import Totop from "@/components/Totop";
                 for(let val of this.items){
                     
                     that.getImg(val.img,function (w,h,r) {
-                        // console.log(w)
                         boxA = document.getElementsByClassName('zq-waterfall-left')[0].clientHeight
                         boxB = document.getElementsByClassName('zq-waterfall-right')[0].clientHeight
-                        console.log(boxA,boxB)
                         if(boxA>boxB){
                             that.itemsB.push(val)
                         }else{
