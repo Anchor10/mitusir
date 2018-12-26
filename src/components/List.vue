@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :backShow="backShow"/>
+        <HeaderCom :backShow="backShow" :tit="title"/>
         <div class="video-box">
             <ul class="con-list">
                     <li class="con-item" v-for="(item,index) in videoList" :key="index">

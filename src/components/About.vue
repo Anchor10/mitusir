@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :backShow="backShow"/>
+        <HeaderCom :backShow="backShow" :tit="title"/>
         <div class="wechat">
             <img :src="src" alt="">
             <h3>扫一扫加微信,放心不是传销(*￣︶￣)</h3>

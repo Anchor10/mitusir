@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <HeaderCom :backShow="backShow"/>
+        <HeaderCom :backShow="backShow" :tit="title"/>
         <SwiperPic />
         <div class="con-box">
             <div class="con-nav">
@@ -49,7 +49,7 @@ export default {
     name: 'Home',
     data() {
         return {
-            title:"首页",
+            title:"不爱编程的兔子",
             backShow:false,
             // 电影金句
             saying:[

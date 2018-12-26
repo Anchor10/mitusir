@@ -3,6 +3,7 @@
         
         <p class="title">
             <span class="back" @click="back" v-if="backShow">&lt;</span>
+            <span class="logo" v-else>{{tit}}</span>
             <router-link class="search" :to="'/search'"></router-link>
             <router-link class="userImg" :to="'/user'"><img :src="userImg" alt=""></router-link>
         </p>
@@ -17,7 +18,7 @@ export default {
         }
     },
     props:
-        ['backShow'],
+        ['backShow','tit'],
     methods:{
         back(){
             this.$router.go(-1);
@@ -43,7 +44,7 @@ export default {
         /* left: 0; */
         height: 30px;
         line-height: 30px;
-        background: #6ca9d6;
+        background: linear-gradient(#0ea1f6,#fff,#0ea1f6);
         width: 100%;
         font-size: 16px;
         color: #fff;
@@ -53,11 +54,29 @@ export default {
     .back{
         position: absolute;
         left: 10px;
-        top: 0;
-        height: 30px;
-        width: 30px;
+        top: 5px;
+        height: 20px;
+        width: 20px;
+        color: #0ea1f6;
+        font-weight: bold;
         font-size: 20px;
-        line-height: 30px;
+        line-height: 20px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        background: #fff;
+    }
+    .logo{
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        height: 20px;
+        color: #0ea1f6;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        border-radius: 3px;
+        padding: 0 10px;
+        box-shadow: 1px 1px 10px #fff;
     }
     .userImg{
         display: block;

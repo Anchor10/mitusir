@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderCom :backShow="backShow"/>
+        <HeaderCom :backShow="backShow" :tit="title"/>
         <div class="zq-waterfall">
             <div class="zq-waterfall-left">
                 <div class="box" v-for="(item,index) in itemsA" :key="index">
