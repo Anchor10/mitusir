@@ -115,15 +115,15 @@ import Totop from "@/components/Totop";
             },
             getData(){
                 // 加载完页面执行的函数
-                let boxA = document.getElementsByClassName('zq-waterfall-left')[0].clientHeight
-                let boxB = document.getElementsByClassName('zq-waterfall-right')[0].clientHeight
+                let boxA = $(".zq-waterfall-left").height();
+                let boxB = $(".zq-waterfall-right").height();
                 let that = this;
                 
                 for(let val of this.items){
                     
                     that.getImg(val.img,function (w,h,r) {
-                        boxA = document.getElementsByClassName('zq-waterfall-left')[0].clientHeight
-                        boxB = document.getElementsByClassName('zq-waterfall-right')[0].clientHeight
+                        boxA = $(".zq-waterfall-left").height();
+                        boxB = $(".zq-waterfall-right").height();
                         if(boxA>boxB){
                             that.itemsB.push(val)
                         }else{
