@@ -1,14 +1,58 @@
 <template>
   <div id="app">
-    <div class="qust-ad"><iframe width="100%" scrolling="no" height="30" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=11&color=%23&bgc=%23FFFFFF&bdc=%23&icon=1&site=14"></iframe></div>
     <keep-alive>
-      <router-view/>
+      <transition :name="transitionName"> 
+        <router-view/>
+      </transition>
     </keep-alive>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+      return {
+          transitionName:''
+      }
+  },
+  watch: {//使用watch 监听$router的变化
+    $route(to, from) {
+      //如果to索引大于from索引,判断为前进状态,反之则为后退状态
+      if(to.meta.index > from.meta.index){
+        //设置动画名称
+        this.transitionName = 'slide-left';
+      }else{
+        this.transitionName = 'slide-right';
+      }
+    }
+  }
 }
 </script>
+<style scoped>
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all 500ms;
+  position: absolute;
+}
+.slide-right-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-leave-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+</style>
+

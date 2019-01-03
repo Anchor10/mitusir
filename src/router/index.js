@@ -21,25 +21,30 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
+      meta:{index:0},//meta对象的index用来定义当前路由的层级,由小到大,由低到高
       component: Home
     },
     {
       path: '/photo',
       name: 'Photo',
+      meta:{index:1},
       component: Photo
     },
     {
       path: '/list',
       name: 'List',
+      meta:{index:2},
       component: List
     },
     {
       path: '/about',
       name: 'About',
+      meta:{index:3},
       component: About
     },
     {
       path:'*',
+      meta:{index:0},
       redirect:'/',
     }
   ]
